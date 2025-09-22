@@ -94,13 +94,3 @@ header h4 {
 .social-media a:hover {
     text-decoration: underline;
 }
-
-.video-container {
-    position: relative;
-    padding-bottom: 56.3%;
-    height: 0;
-}
-.video-full-width {
-    min-width: calc(100% + 64px);
-    padding-bottom: 60.25%;
-}
