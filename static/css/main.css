@@ -59,7 +59,7 @@ header h2 {
     color: #FFFFFF; /* Цвет шрифта */
 }
 
-header h3 p {
+header h3 {
     display: inline-block; /* Метод отображения */
     padding: 5px 10px; /* Внутренний отступ от границы элемента до его внутреннего содержимого */
     background-color: #23232d; /* Цвет фона */
