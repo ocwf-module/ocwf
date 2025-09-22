@@ -20,25 +20,6 @@
 	<header>
 		<h2>Публикации</h2>
 	</header>
-    {% for post in posts %}
-    <div class="post">
-        <div class="post-header">
-            <header>{{ post.title }}</header>
-        </div>
-        <div class="post-content">
-			<pre>{{ post.content }}</pre>
-			{% if post.image_file %}
-			<img src="{{ url_for('upload', filename=post.image_file) }}" alt="Image" class="post-image">
-			{% endif %}
-			{% if post.file %}
-			<a href="{{ url_for('upload', filename=post.file) }}" download>Загрузить прикреплённый файл</a>
-			{% endif %}
-		</div>
-		<div class="post-data">
-            <data class="date">Опубликовано: {{ post.date_posted.strftime('%Y-%m-%d %H:%M') }}</data>
-        </div>
-    </div>
-    {% endfor %}
 	<header>
 		<h3>Социальные сети</h3>
 	</header>
@@ -49,4 +30,5 @@
 </body>
 
 </html>
+
 
