@@ -18,7 +18,7 @@ body {
 }
 
 /* Заголовок страницы */
-header h1 p {
+header h1 {
     font-family: 'WarfaceRegularEnglish', monospace; /* Применение шрифта и его свойства */
 	text-align: center; /* Выравнивание шрифта */
     font-size: 24px; /* Размер шрифта */
@@ -111,7 +111,7 @@ header h2 {
     background-color: #0056b3; /* Цвет фона */
 }
 
-header h3 {
+header h3 p {
     display: inline-block; /* Метод отображения */
     padding: 5px 10px; /* Внутренний отступ от границы элемента до его внутреннего содержимого */
     background-color: #23232d; /* Цвет фона */
