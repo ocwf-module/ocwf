@@ -22,7 +22,7 @@ header h1 {
     font-family: 'WarfaceRegularEnglish', monospace; /* Применение шрифта и его свойства */
 	text-align: center; /* Выравнивание шрифта */
     font-size: 24px; /* Размер шрифта */
-    color: #fff; /* Цвет шрифта */
+    color: #FFFFFF; /* Цвет шрифта */
 	margin: 10px; /* Отступ вокруг элемента */
 }
 
@@ -41,7 +41,7 @@ nav ul li a {
 	font-family: 'WarfaceRegularEnglish', monospace; /* Применение шрифта и его свойства */
     display: block; /* Метод отображения */
 	font-size: 20px; /* Размер шрифта */
-    color: #fff; /* Цвет шрифта */
+    color: #FFFFFF; /* Цвет шрифта */
     text-align: center; /* Выравнивание шрифта */
     padding: 14px 16px; /* Внутренний отступ от границы элемента до его внутреннего содержимого */
     text-decoration: none; /* Дополнительные эффекты шрифта (подчеркнуть, зачеркнуть) */
@@ -56,59 +56,7 @@ header h2 {
 	text-align: center; /* Выравнивание шрифта */
     font-size: 24px; /* Размер шрифта */
     line-height: 5px; /* Высота строки */
-    color: #fff; /* Цвет шрифта */
-}
-
-/* Главная страница */
-
-/* Посты */
-.post {
-    border: 3px solid #fff; /* Стиль, толщина и цвет границы элемента */
-    padding: 10px; /* Внутренний отступ от границы элемента до его внутреннего содержимого */
-    margin-bottom: 50px; /* Нижний отступ от границы */
-    background-color: #090d1f; /* Цвет фона */
-}
-.post .post-header header {
-	font-family: 'RobotoMedium', monospace; /* Применение шрифта и его свойства */
-    font-size: 24px; /* Размер шрифта */
-    line-height: 30px; /* Высота строки */
-    color: #fff; /* Цвет шрифта */
-}
-.post-content pre {
-    white-space: pre-wrap; /* Автоматически переносит строки по ширине контейнера */
-    word-break: break-all; /* Разрывает длинные слова, если они выходят за границу */
-    overflow-wrap: break-word; /* Альтернатива для старых браузеров */
-}
-.post .post-content {
-	font-family: 'RobotoMedium', monospace; /* Применение шрифта и его свойства */
-	font-size: 20px; /* Размер шрифта */
-	color: #fff; /* Цвет шрифта */
-}
-.post .post-data {
-	font-family: 'RobotoMedium', monospace; /* Применение шрифта и его свойства */
-    font-size: 14px; /* Размер шрифта */
-	line-height: 5px; /* Высота строки */
-	text-align: right; /* Выравнивание шрифта */
-    color: #fff; /* Цвет шрифта */
-    display: block; /* Метод отображения */
-    margin-top: 5px; /* Верхний отступ от границы */
-}
-.post .post-content img {
-    max-width: 100%; /* Максимальная ширина */
-    height: auto; /* Высота */
-    display: block; /* Метод отображения */
-    margin: 15px 0; /* Размер внешнего отступа вокруг элемента */
-}
-.post .post-content a {
-    display: inline-block; /* Метод отображения */
-    padding: 5px 10px; /* Внутренний отступ от границы элемента до его внутреннего содержимого */
-    background-color: #007bff; /* Цвет фона */
-    color: #fff; /* Цвет шрифта */
-    border-radius: 3px; /* Радиус скругления уголков рамки */
-    margin-top: 10px; /* Верхний отступ от границы */
-}
-.post .post-content a:hover {
-    background-color: #0056b3; /* Цвет фона */
+    color: #FFFFFF; /* Цвет шрифта */
 }
 
 header h3 p {
@@ -145,54 +93,4 @@ header h4 {
 }
 .social-media a:hover {
     text-decoration: underline;
-}
-
-/* Редактор публикаций */
-
-form label {
-	font-family: 'RobotoMedium', monospace; /* Применение шрифта и его свойства */
-	font-size: 16px; /* Размер шрифта */
-	color: #fff; /* Цвет шрифта */
-	text-align: left;
-}
-form text-1 textarea {
-	width: 100%;
-	height: 40px;
-	min-height: 40px;
-	max-width: 100%; /* Ограничение для удобства чтения и ввода текста */
-	margin-bottom: 20px; /* Нижний отступ от границы */
-	background: #090d1f;
-	font-family: 'RobotoMedium', monospace; /* Применение шрифта и его свойства */
-	font-size: 16px; /* Размер шрифта */
-	color: #fff; /* Цвет шрифта */
-}
-form text-2 textarea {
-	width: 100%;
-	height: 100%;
-	min-height: 400px;
-	max-width: 100%; /* Ограничение для удобства чтения и ввода текста */
-	margin-bottom: 20px; /* Нижний отступ от границы */
-	background: #090d1f;
-	font-family: 'RobotoMedium', monospace; /* Применение шрифта и его свойства */
-	font-size: 16px; /* Размер шрифта */
-	color: #fff; /* Цвет шрифта */
-}
-form input {
-	display: block;
-	padding: 6px 12px;
-	cursor: pointer;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	background-color: #fff;
-	font-size: 20px;
-	margin-bottom: 20px; /* Нижний отступ от границы */
-}
-form button {
-	display: block;
-	cursor: pointer;
-	margin: auto;
-	background: #4676D7;
-	color: #fff;
-	padding: 8px 16px;
-	font-size: 20px;
 }
