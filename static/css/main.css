@@ -95,14 +95,7 @@ header h4 {
     text-decoration: underline;
 }
 
-.video-container {
-	position: relative;
-    height: 0;
-    overflow: hidden;
-}
-        
-.video-container iframe,
-.video-container video {
+.video-container iframe {
     position: absolute;
     top: 0;
     left: 0;
