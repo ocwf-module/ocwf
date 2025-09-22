@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Warface_HELP</title>
+</head>
+<body>
+	<header>
+		<h1>Официальный сайт сообщества Warface_HELP</h1>
+	</header>
+    <nav>
+        <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/add-post">Редактор публикаций</a></li>
+        </ul>
+    </nav>
+	<header>
+		<h2>Публикации</h2>
+	</header>
+    {% for post in posts %}
+    <div class="post">
+        <div class="post-header">
+            <header>{{ post.title }}</header>
+        </div>
+        <div class="post-content">
+			<pre>{{ post.content }}</pre>
+			{% if post.image_file %}
+			<img src="{{ url_for('upload', filename=post.image_file) }}" alt="Image" class="post-image">
+			{% endif %}
+			{% if post.file %}
+			<a href="{{ url_for('upload', filename=post.file) }}" download>Загрузить прикреплённый файл</a>
+			{% endif %}
+		</div>
+		<div class="post-data">
+            <data class="date">Опубликовано: {{ post.date_posted.strftime('%Y-%m-%d %H:%M') }}</data>
+        </div>
+    </div>
+    {% endfor %}
+	<header>
+		<h3>Социальные сети</h3>
+	</header>
+	<iframe src="https://wf.cdn.gmru.net/static/wf.mail.ru/promo/streets/dist/media/art.1472464.webm" width="640" height="360" allow="encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+    <div class="social-media">
+        <a class="vk" href="https://vk.com/warfacehp" target="_blank">Сообщество в VK</a>
+		<a class="tg" href="https://t.me/warfacehelp" target="_blank">Сообщество в Telegram</a>
+    </div>
+</body>
+</html>

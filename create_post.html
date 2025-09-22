@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Warface_HELP | Редактор</title>
+</head>
+<body>
+	<header>
+		<h1>Официальный сайт сообщества Warface_HELP</h1>
+	</header>
+    <nav>
+        <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/add-post">Редактор публикаций</a></li>
+        </ul>
+    </nav>
+	<header>
+		<h2>Редактор публикаций</h2>
+	</header>
+    <form method="POST" enctype="multipart/form-data">
+        <text-1>
+			<label for="title">Заголовок:</label><br>
+			<textarea id="title" name="title"></textarea><br>
+		</text-1>
+		<text-2>
+			<label for="content">Содержание:</label><br>
+			<textarea id="content" name="content"></textarea><br>
+		</text-2>
+        <label for="image">Изображение:</label><br>
+        <input type="file" id="image" name="image"><br>
+        <label for="file">Файл:</label><br>
+        <input type="file" id="file" name="file"><br>
+        <button type="submit">Опубликовать</button>
+    </form>
+</body>
+</html>
