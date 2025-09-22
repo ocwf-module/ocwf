@@ -111,13 +111,21 @@ header h2 {
     background-color: #0056b3; /* Цвет фона */
 }
 
+header h3 {
+    display: inline-block; /* Метод отображения */
+    padding: 5px 10px; /* Внутренний отступ от границы элемента до его внутреннего содержимого */
+    background-color: #007bff; /* Цвет фона */
+    color: #fff; /* Цвет шрифта */
+    border-radius: 3px; /* Радиус скругления уголков рамки */
+    margin-top: 10px; /* Верхний отступ от границы */
+}
 /* Социальные сети */
 iframe {
 	display: block;
 	margin: auto;
 	margin-bottom: 25px; /* Нижний отступ от границы */
 }
-header h3 {
+header h4 {
     font-family: 'WarfaceRegularEnglish', monospace; /* Применение шрифта и его свойства */
 	text-align: center; /* Выравнивание шрифта */
     font-size: 24px; /* Размер шрифта */
