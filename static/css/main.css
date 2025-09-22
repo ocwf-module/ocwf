@@ -95,9 +95,12 @@ header h4 {
     text-decoration: underline;
 }
 
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+.video-container {
+    position: relative;
+    padding-bottom: 56.3%;
+    height: 0;
+}
+.video-full-width {
+    min-width: calc(100% + 64px);
+    padding-bottom: 60.25%;
 }
