@@ -18,7 +18,7 @@ body {
 }
 
 /* Заголовок страницы */
-header h1 {
+header h1 p {
     font-family: 'WarfaceRegularEnglish', monospace; /* Применение шрифта и его свойства */
 	text-align: center; /* Выравнивание шрифта */
     font-size: 24px; /* Размер шрифта */
