@@ -10,7 +10,7 @@
 
 /* Фон страницы */
 body {
-    background: url(../images/background.png); /* Путь к изображению */
+    background: url(../images/background.webp); /* Путь к изображению */
     background-repeat: no-repeat; /* Устанавливаем, чтобы изображение не повторялось */
     background-size: cover; /* Масштабируем изображение, чтобы покрыть всю область экрана */
     background-position: center; /* Центрируем изображение */
