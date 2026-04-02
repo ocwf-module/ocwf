@@ -1,2 +1,1 @@
-# OCWF
-My First Website for My Own "OCWF | Oversight Committee Warface Community"
+# Мой первый сайт для собственного сообщества "OCWF | Oversight Committee Warface"
