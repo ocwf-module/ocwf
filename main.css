@@ -1,0 +1,96 @@
+/* Шрифты */
+@font-face {
+    font-family: 'WarfaceRegularEnglish'; /* Название шрифта для использования в CSS */
+    src: url('../fonts/warfaceregularenglish.ttf') format('truetype'); /* Путь к файлу шрифта */
+}
+@font-face {
+    font-family: 'RobotoMedium'; /* Название шрифта для использования в CSS */
+    src: url('../fonts/Roboto-Medium.ttf') format('truetype'); /* Путь к файлу шрифта */
+}
+
+/* Фон страницы */
+body {
+    background: url(../images/background.webp); /* Путь к изображению */
+    background-repeat: no-repeat; /* Устанавливаем, чтобы изображение не повторялось */
+    background-size: cover; /* Масштабируем изображение, чтобы покрыть всю область экрана */
+    background-position: center; /* Центрируем изображение */
+    background-attachment: fixed; /* Делаем фон фиксированным */
+}
+
+/* Заголовок страницы */
+header h1 {
+    font-family: 'WarfaceRegularEnglish', monospace; /* Применение шрифта и его свойства */
+	text-align: center; /* Выравнивание шрифта */
+    font-size: 24px; /* Размер шрифта */
+    color: #FFFFFF; /* Цвет шрифта */
+	margin: 10px; /* Отступ вокруг элемента */
+}
+
+/* Навигационная панель */
+nav ul {
+    list-style-type: none;
+    margin: 0px; /* Отступ вокруг элемента */
+    padding: 0px; /* Внутренний отступ от границы элемента до его внутреннего содержимого */
+    overflow: hidden; /* Что делать со слишком большим содержимым (показывать, скрывать, скролить, авто-подбор) */
+    background-color: #d15400; /* Цвет фона */
+}
+nav ul li {
+    float: left; /* Положение кнопок панели */
+}
+nav ul li a {
+	font-family: 'WarfaceRegularEnglish', monospace; /* Применение шрифта и его свойства */
+    display: block; /* Метод отображения */
+	font-size: 20px; /* Размер шрифта */
+    color: #FFFFFF; /* Цвет шрифта */
+    text-align: center; /* Выравнивание шрифта */
+    padding: 14px 16px; /* Внутренний отступ от границы элемента до его внутреннего содержимого */
+    text-decoration: none; /* Дополнительные эффекты шрифта (подчеркнуть, зачеркнуть) */
+}
+nav ul li a:hover {
+    background-color: #9e3f00; /* Цвет выделения кнопок панели */
+}
+
+/* Заголовок раздела страницы */
+header h2 {
+    font-family: 'WarfaceRegularEnglish', monospace; /* Применение шрифта и его свойства */
+	text-align: center; /* Выравнивание шрифта */
+    font-size: 24px; /* Размер шрифта */
+    line-height: 5px; /* Высота строки */
+    color: #FFFFFF; /* Цвет шрифта */
+}
+
+header h3 {
+    display: inline-block; /* Метод отображения */
+    padding: 5px 10px; /* Внутренний отступ от границы элемента до его внутреннего содержимого */
+    background-color: #23232d; /* Цвет фона */
+    color: #FFFFFF; /* Цвет шрифта */
+    border-radius: 3px; /* Радиус скругления уголков рамки */
+    margin-top: 10px; /* Верхний отступ от границы */
+}
+/* Социальные сети */
+iframe {
+	display: block;
+	margin: auto;
+	margin-bottom: 25px; /* Нижний отступ от границы */
+}
+header h4 {
+    font-family: 'WarfaceRegularEnglish', monospace; /* Применение шрифта и его свойства */
+	text-align: center; /* Выравнивание шрифта */
+    font-size: 24px; /* Размер шрифта */
+    line-height: 26px; /* Высота строки */
+    color: #fff; /* Цвет шрифта */
+}
+.social-media {
+	background-color: #090d1f;
+}
+.social-media a {
+	font-size: 20px; /* Размер шрифта */
+	line-height: 24px; /* Высота строки */
+    display: block;
+    margin-right: 10px;
+    color: #0048ff;
+    text-decoration: none;
+}
+.social-media a:hover {
+    text-decoration: underline;
+}
