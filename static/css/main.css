@@ -8,13 +8,6 @@
     src: url('../fonts/Roboto-Medium.ttf') format('truetype'); /* Путь к файлу шрифта */
 }
 
-html {
-	scroll-behavior: smooth;
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
 :root {
 	--color-primary: #FF6800; 
 	--color-primary-hover: #FF6800;
@@ -27,10 +20,17 @@ html {
 	--transition: all 0.3s ease;
 }
 
+html {
+	scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body {
 	font-family: 'WarfaceRegularEnglish', monospace;
 	color: var(--color-text-dark);
-	line-height: 1.6;
+	line-height: 1.5;
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
