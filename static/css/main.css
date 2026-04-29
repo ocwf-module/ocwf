@@ -103,6 +103,7 @@ nav {
 	top: 0;
 	z-index: 100;
 	padding: 1rem 5%;
+	margin-top: 2rem;
 }
 
 nav ul {
