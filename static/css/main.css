@@ -23,7 +23,7 @@ html {
 	--color-text-dark: #000000;
 	--color-text-muted: #7F7F7F;
 	--shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.05);
-	--shadow-md: 0 10px 30px rgba(255, 102, 0, 0.15);
+	--shadow-md: 0 10px 30px rgba(255, 104, 0, 0.15);
 	--transition: all 0.3s ease;
 }
 
@@ -118,7 +118,7 @@ nav a {
 	text-decoration: none;
 	color: var(--color-text-dark);
 	font-weight: 600;
-	font-size: 1rem;
+	font-size: 1.25rem;
 	padding: 0.5rem 1rem;
 	border-radius: 8px;
 	transition: var(--transition);
