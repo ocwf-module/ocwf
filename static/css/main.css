@@ -28,7 +28,7 @@ html {
 }
 
 body {
-	font-family: 'Inter', sans-serif;
+	font-family: 'WarfaceRegularEnglish', monospace;
 	color: var(--color-text-dark);
 	line-height: 1.6;
 	display: flex;
