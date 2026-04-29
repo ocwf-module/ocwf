@@ -154,7 +154,7 @@ nav a:hover {
 /* --- Основной контент --- */
 main {
 	flex: 1;
-	padding: 4rem 5%;
+	padding: 2rem;
 	max-width: 1400px;
 	margin: 0 auto;
 	width: 100%;
