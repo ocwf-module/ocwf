@@ -8,89 +8,279 @@
     src: url('../fonts/Roboto-Medium.ttf') format('truetype'); /* Путь к файлу шрифта */
 }
 
-/* Фон страницы */
+html {
+	scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--color-primary: #FF6800; 
+	--color-primary-hover: #FF6800;
+	--color-white: #FFFFFF;
+	--color-white-glass: rgba(255, 255, 255, 0.8);
+	--color-text-dark: #000000;
+	--color-text-muted: #7F7F7F;
+	--shadow-sm: 0 4px 15px rgba(0, 0, 0, 0.05);
+	--shadow-md: 0 10px 30px rgba(255, 102, 0, 0.15);
+	--transition: all 0.3s ease;
+}
+
 body {
-    background: url(../images/background.webp); /* Путь к изображению */
-    background-repeat: no-repeat; /* Устанавливаем, чтобы изображение не повторялось */
-    background-size: cover; /* Масштабируем изображение, чтобы покрыть всю область экрана */
-    background-position: center; /* Центрируем изображение */
-    background-attachment: fixed; /* Делаем фон фиксированным */
+	font-family: 'Inter', sans-serif;
+	color: var(--color-text-dark);
+	line-height: 1.6;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	position: relative;
+	background-color: #FFFFFF; /* Резервный цвет */
 }
 
-/* Заголовок страницы */
-header h1 {
-    font-family: 'WarfaceRegularEnglish', monospace; /* Применение шрифта и его свойства */
-	text-align: center; /* Выравнивание шрифта */
-    font-size: 24px; /* Размер шрифта */
-    color: #FFFFFF; /* Цвет шрифта */
-	margin: 10px; /* Отступ вокруг элемента */
+/* --- Анимированный задний фон --- */
+.animated-bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+	overflow: hidden;
+	background: #FFFFFF;
 }
 
-/* Навигационная панель */
+.bg-shape {
+	position: absolute;
+	filter: blur(100px);
+	border-radius: 50%;
+	animation: floatShapes 20s infinite alternate ease-in-out;
+	opacity: 0.6;
+}
+
+.bg-shape-1 {
+	width: 600px;
+	height: 600px;
+	background-color: #FF6800;
+	top: -200px;
+	left: -100px;
+}
+
+.bg-shape-2 {
+	width: 500px;
+	height: 500px;
+	background-color: #FF6800;
+	bottom: -150px;
+	right: -100px;
+	animation-delay: -5s;
+	animation-duration: 25s;
+}
+
+.bg-shape-3 {
+	width: 800px;
+	height: 800px;
+	background-color: #FFFFFF;
+	top: 20%;
+	left: 20%;
+	animation-delay: -10s;
+	animation-duration: 30s;
+	opacity: 0.9;
+}
+
+@keyframes floatShapes {
+	0% { transform: translate(0, 0) scale(1); }
+	50% { transform: translate(8%, 12%) scale(1.1); }
+	100% { transform: translate(-5%, 15%) scale(0.9); }
+}
+
+/* --- Навигация --- */
+nav {
+	background-color: var(--color-white-glass);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	box-shadow: var(--shadow-sm);
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	padding: 1rem 5%;
+}
+
 nav ul {
-    list-style-type: none;
-    margin: 0px; /* Отступ вокруг элемента */
-    padding: 0px; /* Внутренний отступ от границы элемента до его внутреннего содержимого */
-    overflow: hidden; /* Что делать со слишком большим содержимым (показывать, скрывать, скролить, авто-подбор) */
-    background-color: #d15400; /* Цвет фона */
-}
-nav ul li {
-    float: left; /* Положение кнопок панели */
-}
-nav ul li a {
-	font-family: 'WarfaceRegularEnglish', monospace; /* Применение шрифта и его свойства */
-    display: block; /* Метод отображения */
-	font-size: 20px; /* Размер шрифта */
-    color: #FFFFFF; /* Цвет шрифта */
-    text-align: center; /* Выравнивание шрифта */
-    padding: 14px 16px; /* Внутренний отступ от границы элемента до его внутреннего содержимого */
-    text-decoration: none; /* Дополнительные эффекты шрифта (подчеркнуть, зачеркнуть) */
-}
-nav ul li a:hover {
-    background-color: #9e3f00; /* Цвет выделения кнопок панели */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	list-style: none;
+	flex-wrap: wrap;
 }
 
-/* Заголовок раздела страницы */
-header h2 {
-    font-family: 'WarfaceRegularEnglish', monospace; /* Применение шрифта и его свойства */
-	text-align: center; /* Выравнивание шрифта */
-    font-size: 24px; /* Размер шрифта */
-    line-height: 5px; /* Высота строки */
-    color: #FFFFFF; /* Цвет шрифта */
+nav a {
+	text-decoration: none;
+	color: var(--color-text-dark);
+	font-weight: 600;
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+	border-radius: 8px;
+	transition: var(--transition);
 }
 
-header h3 {
-    display: inline-block; /* Метод отображения */
-    padding: 5px 10px; /* Внутренний отступ от границы элемента до его внутреннего содержимого */
-    background-color: #23232d; /* Цвет фона */
-    color: #FFFFFF; /* Цвет шрифта */
-    border-radius: 3px; /* Радиус скругления уголков рамки */
-    margin-top: 10px; /* Верхний отступ от границы */
+nav a:hover {
+	color: var(--color-primary);
+	background-color: rgba(255, 104, 0, 0.1);
 }
-/* Социальные сети */
-iframe {
-	display: block;
-	margin: auto;
-	margin-bottom: 25px; /* Нижний отступ от границы */
+
+/* --- Главный экран (Hero) --- */
+.hero {
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 249, 252, 0.4) 100%);
+	backdrop-filter: blur(5px);
+	padding: 4rem 5%;
+	text-align: center;
+	border-bottom: 1px solid rgba(255, 104, 0, 0.1);
 }
-header h4 {
-    font-family: 'WarfaceRegularEnglish', monospace; /* Применение шрифта и его свойства */
-	text-align: center; /* Выравнивание шрифта */
-    font-size: 24px; /* Размер шрифта */
-    line-height: 26px; /* Высота строки */
-    color: #fff; /* Цвет шрифта */
+
+.hero h1 {
+	font-size: 2.5rem;
+	font-weight: 800;
+	color: var(--color-text-dark);
+	max-width: 800px;
+	margin: 0 auto;
 }
+
+.hero h1 span {
+	color: var(--color-primary);
+}
+
+/* --- Основной контент --- */
+main {
+	flex: 1;
+	padding: 4rem 5%;
+	max-width: 1400px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.section-header {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.section-header h2 {
+	font-size: 2rem;
+	color: var(--color-text-dark);
+	position: relative;
+	display: inline-block;
+}
+
+.section-header h2::after {
+	content: '';
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 4px;
+	background-color: var(--color-primary);
+	border-radius: 2px;
+}
+
+/* --- Блок видео --- */
+.publications-container {
+	background-color: var(--color-white-glass);
+	backdrop-filter: blur(10px);
+	border-radius: 16px;
+	padding: 1.5rem;
+	box-shadow: var(--shadow-sm);
+	margin-bottom: 4rem;
+	border: 1px solid rgba(255,255,255,0.5);
+}
+
+.video-wrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* Пропорции 16:9 */
+	height: 0;
+	overflow: hidden;
+	border-radius: 12px;
+	background-color: #000;
+	box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.video-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+
+/* --- Социальные сети --- */
+.social-section {
+	text-align: center;
+	background-color: var(--color-white-glass);
+	backdrop-filter: blur(10px);
+	padding: 3rem 5%;
+	border-radius: 16px;
+	box-shadow: var(--shadow-sm);
+	border: 1px solid rgba(255,255,255,0.5);
+}
+
+.social-section h4 {
+	font-size: 1.5rem;
+	margin-bottom: 1.5rem;
+	color: var(--color-text-dark);
+}
+
 .social-media {
-	background-color: #090d1f;
+	display: flex;
+	justify-content: center;
+	gap: 1.5rem;
+	flex-wrap: wrap;
 }
+
 .social-media a {
-	font-size: 20px; /* Размер шрифта */
-	line-height: 24px; /* Высота строки */
-    display: block;
-    margin-right: 10px;
-    color: #0048ff;
-    text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.8rem 2rem;
+	font-size: 1rem;
+	font-weight: 600;
+	text-decoration: none;
+	color: var(--color-white);
+	background-color: var(--color-primary);
+	border-radius: 50px;
+	transition: var(--transition);
+	box-shadow: var(--shadow-md);
 }
+
 .social-media a:hover {
-    text-decoration: underline;
+	background-color: var(--color-primary-hover);
+	transform: translateY(-3px);
+	box-shadow: 0 15px 25px rgba(255, 104, 0, 0.25);
 }
+
+/* --- Футер --- */
+footer {
+	text-align: center;
+	padding: 2rem;
+	background-color: var(--color-white-glass);
+	backdrop-filter: blur(10px);
+	color: var(--color-text-muted);
+	font-size: 0.9rem;
+	border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+/* --- Адаптивность --- */
+@media (max-width: 768px) {
+	nav ul {
+		flex-direction: column;
+		gap: 0.5rem;
+		padding: 1rem 0;
+	}
+	.hero h1 {
+		font-size: 1.8rem;
+	}
+	main {
+		padding: 2rem 5%;
+	}
+}
+
