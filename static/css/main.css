@@ -223,7 +223,6 @@ main {
 	border-radius: 16px;
 	box-shadow: var(--shadow-sm);
 	border: 1px solid rgba(255,255,255,0.5);
-	margin-top: 2rem;
 }
 
 .social-section h4 {
